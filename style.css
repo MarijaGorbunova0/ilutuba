@@ -1,0 +1,181 @@
+/* ---------- Värvid ja fondid (ühes kohas, et oleks lihtne muuta) ---------- */
+:root {
+  --tekst: #5a3f46;          
+  --aktsent: #b9788a;        
+  --aktsent-tume: #94566a;   
+  --raam: #c9a0ab;          
+  --kiri: "Dancing Script", cursive;
+  --tavaline: "Montserrat", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--tekst);
+  font-family: var(--tavaline);
+  background: #f6efe6 url("pildid/taust.png") repeat; 
+}
+
+.leht {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+
+h1 {
+  margin: 0 0 8px;
+  font-family: var(--kiri);
+  font-weight: 600;
+  font-size: 3.4rem;
+  line-height: 1.1;
+}
+
+nav { display: flex; gap: 22px; margin-bottom: 18px; }
+
+nav a {
+  color: var(--tekst);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.95rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+nav a:hover, nav a.praegune { color: var(--aktsent-tume); border-color: var(--aktsent); }
+
+
+.galerii {
+  position: relative;
+  border: 2px solid var(--raam);
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(90, 63, 70, .15);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.slaidid, .slaid { width: 100%; height: 100%; }
+.slaid {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .8s ease;
+}
+.slaid.aktiivne { opacity: 1; }
+
+.nool {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px; height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .75);
+  color: var(--aktsent-tume);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+.nool:hover { background: #fff; }
+.eelmine { left: 12px; }
+.jargmine { right: 12px; }
+
+.punktid {
+  position: absolute;
+  left: 0; right: 0; bottom: 12px;
+  display: flex; justify-content: center; gap: 8px;
+}
+.punktid button {
+  width: 10px; height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--aktsent-tume);
+  background: rgba(255, 255, 255, .8);
+  cursor: pointer;
+}
+.punktid button.aktiivne { background: var(--aktsent-tume); }
+
+
+.parem { padding-top: 6px; }
+
+.sotsiaal {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.ikoon {
+  width: 46px; height: 46px;
+  display: grid; place-items: center;
+  border: 1.5px solid var(--aktsent);
+  border-radius: 50%;
+  color: var(--aktsent);
+  background: rgba(255, 255, 255, .45);
+  text-decoration: none;
+}
+.ikoon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.ikoon svg .täide { fill: currentColor; stroke: none; }
+
+
+a.ikoon { transition: background .2s, color .2s, transform .2s; }
+a.ikoon:hover { background: var(--aktsent); color: #fff; transform: translateY(-2px); }
+span.ikoon { cursor: default; opacity: .85; }
+
+.kaart {
+  border: 2px solid var(--raam);
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(90, 63, 70, .15);
+  aspect-ratio: 4 / 3;
+}
+.kaart iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+.kontakt { text-align: center; font-style: normal; margin-top: 16px; }
+.kontakt p { margin: 4px 0; }
+.aadress { font-family: var(--kiri); font-size: 1.5rem; }
+.ajad { font-size: 0.95rem; }
+
+.kitsas { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
+.kitsas h1 a { color: inherit; text-decoration: none; }
+.hinnad {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, .55);
+  border: 2px solid var(--raam);
+  box-shadow: 0 6px 18px rgba(90, 63, 70, .12);
+}
+.hinnad caption { font-family: var(--kiri); font-size: 2rem; text-align: left; padding: 8px 0; }
+.hinnad th, .hinnad td { padding: 12px 16px; text-align: left; }
+.hinnad thead th { background: var(--aktsent); color: #fff; font-weight: 500; letter-spacing: .03em; }
+.hinnad tbody tr + tr td { border-top: 1px solid rgba(185, 120, 138, .35); }
+.hinnad td:last-child, .hinnad th:last-child { text-align: right; white-space: nowrap; }
+.hinnad .rubriik td { background: rgba(185, 120, 138, .16); font-family: var(--kiri); font-size: 1.4rem; font-weight: 600; text-align: left; }
+
+.nupp {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 26px;
+  border: 2px solid var(--aktsent);
+  border-radius: 999px;
+  color: var(--aktsent-tume);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-size: .9rem;
+  transition: background .2s, color .2s;
+}
+.nupp:hover { background: var(--aktsent); color: #fff; }
+
+
+@media (max-width: 800px) {
+  .leht { grid-template-columns: 1fr; padding: 28px 16px; }
+  h1 { font-size: 2.6rem; }
+}

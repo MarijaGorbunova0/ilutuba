@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marie ilutuba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="leht">
+    <div class="vasak">
+      <header>
+        <h1>Marie ilutuba</h1>
+        <nav>
+          <a href="hinnakiri.html">Hinnakiri</a>
+          <a href="broneeri.html">Broneeri aeg</a>
+        </nav>
+      </header>
+
+      <section class="galerii" aria-label="Ilutoa galerii">
+        <div class="slaidid">
+          <img class="slaid aktiivne" src="pildid/galerii1.jpg" alt="Ilutuba pilt 1">
+          <img class="slaid" src="pildid/galerii2.jpg" alt="Ilutuba pilt 2">
+          <img class="slaid" src="pildid/galerii3.jpg" alt="Ilutuba pilt 3">
+          <img class="slaid" src="pildid/galerii4.jpg" alt="Ilutuba pilt 4">
+        </div>
+        <button class="nool eelmine" aria-label="Eelmine pilt">&#10094;</button>
+        <button class="nool jargmine" aria-label="Järgmine pilt">&#10095;</button>
+        <div class="punktid"></div>
+      </section>
+    </div>
+
+    <!-- PAREM VEERG: sotsiaalmeedia, kaart, aadress -->
+    <aside class="parem">
+      <div class="sotsiaal">
+        <!-- Instagram (ei ole klõpsatav) -->
+        <span class="ikoon" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-label="Instagram"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" class="täide"/></svg>
+        </span>
+        <!-- Facebook (ei ole klõpsatav) -->
+        <span class="ikoon" title="Facebook">
+          <svg viewBox="0 0 24 24" aria-label="Facebook"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>
+        </span>
+        <!-- Tumblr (ainus klõpsatav) -->
+        <a class="ikoon" href="https://www.tumblr.com/tagged/nail-art" target="_blank" rel="noopener" title="Tumblr">
+          <svg viewBox="0 0 24 24" aria-label="Tumblr"><path d="M14.5 21c-3 0-5-1.6-5-5v-5H7V8c2.2-.7 3.4-2.6 3.7-5H14v4.5h3.5V11H14v4.6c0 1.2.6 1.9 1.8 1.9h1.7V21h-3z" class="täide"/></svg>
+        </a>
+      </div>
+
+      <div class="kaart">
+        <iframe
+          title="Marie ilutoa asukoht Google Mapsis"
+          src="https://www.google.com/maps?q=%C3%9Clikooli+18,+Tartu&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <address class="kontakt">
+        <p class="aadress">Ülikooli 18, 50090 Tartu</p>
+        <p class="ajad">E–R 10:00–19:00</p>
+        <p class="ajad">L 10:00–15:00</p>
+        <p class="ajad">P suletud</p>
+      </address>
+    </aside>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
