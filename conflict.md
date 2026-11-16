@@ -1,3 +1,4 @@
 Ilutuba on kõige parim.
-Siin on kaunid küüned.
-Tule ja broneeri aeg.
+Siin on väga kaunid küüned.
+Tule ja broneeri aeg!!!
+
